@@ -39,6 +39,8 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
+  background: #191951;
+  border-radius: 10px;
 }
 
 .tournament-price-container img {

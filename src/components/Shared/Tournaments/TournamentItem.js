@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import priceIcon from "./../../../assets/images/priceIconTr.svg";
 import placeholderTr from "./../../../assets/images/placeholderTr.svg";
@@ -18,9 +19,14 @@ function TournamentItem(props) {
         <p>
           MIN, BET <span>&euro;{data.bet}</span>
         </p>
-        <Button value="VIEW TOURNAMENT" className={styles["tournament-btn"]} />
+        <Link to={`/tournaments/${data.id}`}>
+          <Button
+            value="VIEW TOURNAMENT"
+            className={styles["tournament-btn"]}
+          />
+        </Link>
         <p>
-          WILL END ON: <span>{data.endOfTournament}</span>
+          WILL END ON: <span>{data.tournamentEndsAt}</span>
         </p>
       </div>
     </div>

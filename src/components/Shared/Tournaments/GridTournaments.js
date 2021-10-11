@@ -10,44 +10,51 @@ const dummyData = [
     title: "Farwell june",
     price: 6.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
   {
     id: 2,
     title: "Drops & Wins",
     price: 6.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
   {
     id: 3,
     title: "Live Casino",
     price: 6.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
   {
     id: 4,
     title: "Monthly Race",
     price: 6.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
   {
     id: 5,
     title: "Top Provider",
     price: 6.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
   {
     id: 6,
     title: "Slot of the Week",
     price: 5.0,
     bet: 0.2,
-    endOfTournament: "08-07-2021",
+    tournamentStartsAt: "07-07-2021",
+    tournamentEndsAt: "08-07-2021",
   },
 ];
+
 function GridTournaments() {
   return (
     <>
