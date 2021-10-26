@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import arrowImg from "./../../assets/icons/Vector.svg";
+/* Custom hook */
+import useClickOutside from "./../../hooks/useClickOutside";
+
 import styles from "./FilterDropdown.module.css";
 function FilterDropdown(props) {
   const [isOpenDropdown, setIsOpenDropdown] = React.useState(false);
+  const wrapperRef = useRef(null);
+
+  useClickOutside(wrapperRef, setIsOpenDropdown);
   return (
-    <div className={styles["filter-dropdown"]}>
+    <div className={styles["filter-dropdown"]} ref={wrapperRef}>
       <div
         className={styles["filter-item"]}
         onClick={() => setIsOpenDropdown(!isOpenDropdown)}

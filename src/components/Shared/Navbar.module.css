@@ -71,7 +71,12 @@ select {
   text-transform: uppercase;
   cursor: pointer;
 }
-
+.dropdown-container__nav {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 @media screen and (max-width: 1110px) {
 }
 

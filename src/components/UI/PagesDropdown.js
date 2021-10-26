@@ -3,12 +3,16 @@ import { NavLink } from "react-router-dom";
 
 import GlobeIcon from "./../../assets/icons/GlobeIcon.svg";
 import downArrow from "./../../assets/icons/down_arrow.svg";
+/* Custom hook */
+import useClickOutside from "./../../hooks/useClickOutside";
 
 import styles from "./PagesDropdown.module.css";
+
 function PagesDropdown() {
   const [isOpenDropdown, setIsOpenDropDown] = React.useState(false);
   const [isPageSelected, setIsPageSelected] = React.useState(false);
   const listRef = useRef(null);
+  const wrapperRef = useRef(null);
 
   /* Add the active class to the page span if we select a page */
   React.useEffect(() => {
@@ -19,8 +23,9 @@ function PagesDropdown() {
     });
   }, [isOpenDropdown]);
 
+  useClickOutside(wrapperRef, setIsOpenDropDown);
   return (
-    <div className={styles["navbar-custom-dropdown"]}>
+    <div className={styles["navbar-custom-dropdown"]} ref={wrapperRef}>
       <div
         className={styles["navbar-custom-dropdown-header"]}
         onClick={() => setIsOpenDropDown(!isOpenDropdown)}

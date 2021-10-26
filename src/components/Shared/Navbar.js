@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./../UI/Logo";
-import styles from "./Navbar.module.css";
 import PagesDropdown from "../UI/PagesDropdown";
 import LanguagesDropdown from "../UI/LanguagesDropdown";
 
+import styles from "./Navbar.module.css";
 function Navbar(props) {
   return (
     <nav className={`${styles.nav} ${props.className}`}>
@@ -26,12 +26,14 @@ function Navbar(props) {
               TOURNAMENTS
             </NavLink>
           </li>
-          <li>
-            <PagesDropdown />
-          </li>
-          <li>
-            <LanguagesDropdown />
-          </li>
+          <div className={styles["dropdown-container__nav"]}>
+            <li className={styles["d1"]}>
+              <PagesDropdown />
+            </li>
+            <li className={styles["d2"]}>
+              <LanguagesDropdown />
+            </li>
+          </div>
         </ul>
       </div>
     </nav>
